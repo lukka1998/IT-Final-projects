@@ -1,0 +1,56 @@
+<div class="line">
+  <a routerLink="/">Home</a>
+  <p>/</p>
+  <a class="yellow" routerLink="/busket">Cart</a>
+</div>
+
+<div class="cart">
+  <h1>Cart</h1>
+  <div class="cart-content-header">
+    <div class="cart-content-header-left">
+      <div><div>Product</div></div>
+      <div class="item-descr">
+        <div>Qty</div>
+        <div>Price</div>
+        <div>Total</div>
+      </div>
+    </div>
+  </div>
+  <div class="cart-content">
+    <div class="cart-item" *ngFor="let item of cardInfo">
+      <div class="cart-content-left">
+        <div class="edit">
+          <fa-icon
+            class="delete"
+            [icon]="iconX"
+            (click)="deleteItem(item)"
+          ></fa-icon>
+          <fa-icon class="icon" [icon]="iconPen"></fa-icon>
+        </div>
+        <div class="displayedproduct">
+          <img [src]="item.product.image" alt="{{ item.product.name }}" />
+          <h2>{{ item.product.name }}</h2>
+        </div>
+      </div>
+      <div class="cart-content-right">
+        <div class="number-input">
+          <button class="minus" (click)="decrease(item)">-</button>
+          <input
+            type="number"
+            class="number"
+            [(ngModel)]="item.quantity"
+            readonly
+          />
+          <button class="plus" (click)="increase(item)">+</button>
+        </div>
+        <p>${{ item.product.price }}</p>
+        <p>${{ calculateTotal(item) }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="total">
+  Total:
+  <h2>${{ calculateOverallTotal() }}</h2>
+</div>
+<div class="buttn"><button>PROCEED TO CHECKOUT</button></div>

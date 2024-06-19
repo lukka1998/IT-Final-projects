@@ -1,0 +1,28 @@
+<header>
+  <div class="logo"></div>
+  <div class="header-wrapper" [ngClass]="{ scrolled: isScrolled }">
+    <div class="header-child">
+      <img routerLink="/" src="/assets/logo.png" alt="" />
+    </div>
+    <div class="header-child">
+      <h2 routerLink="/">Home</h2>
+      <div class="header-child2 truck-hover">
+        <label for="truck">
+          <h2 routerLink="/busket">Cart</h2>
+        </label>
+      </div>
+      <fa-icon
+        class="burger"
+        (click)="toggleBurger()"
+        [class.activeBurger]="isBurgerActive"
+        [icon]="burger"
+      ></fa-icon>
+      <div class="burger-item">
+        <img class="burger-img" src="/assets/logo.png" alt="" />
+        <a routerLink="/" (click)="closeBurgerMenu()">Home</a>
+        <a routerLink="/busket" (click)="closeBurgerMenu()">Cart</a>
+      </div>
+    </div>
+  </div>
+  <h1>{{ headerTitle }}</h1>
+</header>

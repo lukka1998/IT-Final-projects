@@ -1,0 +1,59 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.categories-conteiner {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-top: 50px;
+}
+.categories-conteiner-h2 {
+  text-align: center;
+  font-size: 35px;
+  margin-bottom: 50px;
+}
+.border {
+  width: 80%;
+  position: relative;
+  left: 10%;
+}
+.categories-item-header a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  padding: 30px 15px;
+}
+.categories-item-header a:hover {
+  background-color: red;
+  color: white;
+  border-image: url("/assets/bt_hoverborder.png") 5 / 5px / 5px;
+  border-image-outset: 3px;
+  cursor: pointer;
+}
+.categories-item-header a:active {
+  background-color: red;
+}
+.categories-item-header {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+.activedCategorie {
+  background-color: red;
+}
+@media only screen and (max-width: 1200px) {
+  .categories-item-header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .categories-item-header a {
+    padding: 10px;
+  }
+}

@@ -1,0 +1,53 @@
+<div class="categories-container">
+  <h2 class="categories-conteiner-h2">Categories</h2>
+  <div class="categories-item-wrapper">
+    <div class="categories-item-header">
+      <a
+        (click)="onCategoryClick(null)"
+        [class.activedCategorie]="selectedCategory === null"
+        >All</a
+      >
+      <a
+        (click)="onCategoryClick(1)"
+        [class.activedCategorie]="selectedCategory === 1"
+        >Salads</a
+      >
+      <a
+        (click)="onCategoryClick(2)"
+        [class.activedCategorie]="selectedCategory === 2"
+        >Soups</a
+      >
+      <a
+        (click)="onCategoryClick(3)"
+        [class.activedCategorie]="selectedCategory === 3"
+        >Chicken-Dishes</a
+      >
+      <a
+        (click)="onCategoryClick(4)"
+        [class.activedCategorie]="selectedCategory === 4"
+        >Beef-Dishes</a
+      >
+      <a
+        (click)="onCategoryClick(5)"
+        [class.activedCategorie]="selectedCategory === 5"
+        >Seafood-Dishes</a
+      >
+      <a
+        (click)="onCategoryClick(6)"
+        [class.activedCategorie]="selectedCategory === 6"
+        >Vegetable-Dishes</a
+      >
+      <a
+        (click)="onCategoryClick(7)"
+        [class.activedCategorie]="selectedCategory === 7"
+        >Bits&Bites</a
+      >
+      <a
+        (click)="onCategoryClick(8)"
+        [class.activedCategorie]="selectedCategory === 8"
+        >On-The-Side</a
+      >
+    </div>
+    <img class="border" src="/assets/border.png" alt="" />
+  </div>
+</div>

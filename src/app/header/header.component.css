@@ -1,0 +1,140 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  background: url("/assets/sprit.png"), rgba(0, 0, 0, 0.384), center;
+}
+.header-child img {
+  font-size: 30px;
+  cursor: pointer;
+}
+h2 {
+  font-size: 18px;
+}
+.truck {
+  color: white;
+  font-size: 20px;
+  transition: all 1s;
+  cursor: pointer;
+}
+
+.truck-hover:hover .truck {
+  transform: translateX(10px);
+}
+.header-child h2 {
+  color: white;
+  cursor: pointer;
+}
+.header-child2 h2 {
+  cursor: pointer;
+  color: white;
+  padding: 3px 10px;
+  background-color: red;
+  border-radius: 5px;
+}
+.header-child {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+.header-child2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.header-wrapper {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  display: fixed;
+  position: fixed;
+  top: 0;
+  height: 150px;
+  width: 100%;
+  z-index: 1000;
+}
+
+header h1 {
+  color: white;
+  font-size: 35px;
+  margin-top: 100px;
+}
+header {
+  display: flex;
+  text-align: center;
+  gap: 100px;
+  flex-direction: column;
+  height: 350px;
+  border-radius: 10px 10px 0px 0px;
+  background-image: url("/assets/inner_banner.jpg");
+  background-size: cover;
+}
+.scrolled {
+  background-color: rgba(0, 0, 0, 0.726);
+
+  background-image: url("/assets/border.png");
+  background-repeat: repeat-x;
+  background-position: center bottom;
+  height: 100px;
+  width: 100%;
+}
+.burger {
+  font-size: 40px;
+  color: yellow;
+  display: none;
+  cursor: pointer;
+}
+.burger-item {
+  width: 400px;
+  height: 1200px;
+  background-color: yellow;
+  z-index: 10000;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+  display: flex;
+  top: -10000px;
+  left: 100px;
+  transform: rotate(15deg);
+}
+.burger-item a {
+  text-decoration: none;
+  font-size: 25px;
+  color: black;
+}
+.burger-img {
+  background-color: black;
+}
+@media only screen and (max-width: 900px) {
+  .header-child2,
+  .header-child h2 {
+    display: none;
+  }
+  .burger {
+    display: block;
+  }
+  .activeBurger ~ .burger-item {
+    top: -100px;
+    transition-duration: 0.3s;
+  }
+}
+@media only screen and (max-width: 825px) {
+  .burger-item {
+    width: 300px;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .burger-item {
+    width: 200px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .burger-item {
+    width: 200px;
+    left: 0px;
+  }
+}
